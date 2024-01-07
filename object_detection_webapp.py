@@ -13,7 +13,7 @@ img_preprocess = weights.transforms() ## Scales values from 0-255 range to 0-1 r
 
 @st.cache_resource
 def load_model():
-    model = fasterrcnn_resnet50_fpn_v2(weights=weights, box_score_thresh=0.5)
+    model = fasterrcnn_resnet50_fpn_v2(weights=weights, box_score_thresh=0.6)
     model.eval(); ## Setting Model for Evaluation/Prediction   
     return model
 
