@@ -13,7 +13,7 @@ img_preprocess = weights.transforms() ## Scales values from 0-255 range to 0-1 r
 
 @st.cache_resource
 def load_model():
-    model = fasterrcnn_resnet50_fpn_v2(weights=weights, box_score_thresh=0.8)
+    model = fasterrcnn_resnet50_fpn_v2(weights=weights, box_score_thresh=0.5)
     model.eval(); ## Setting Model for Evaluation/Prediction   
     return model
 
@@ -35,7 +35,7 @@ def create_image_with_bboxes(img, prediction): ## Adds Bounding Boxes around ori
 
 ## Dashboard
 st.title("Objects Detector :tea: :coffee:")
-upload = st.file_uploader(label="Upload Image :", type=["png", "jpg", "jpeg"]) ## Image as Bytes 
+upload = st.file_uploader(label="Upload Image :", type=["png", "jpg", "jpeg" , "WEBP File"]) ## Image as Bytes 
 
 if upload:
     img = Image.open(upload)
