@@ -35,7 +35,7 @@ def create_image_with_bboxes(img, prediction): ## Adds Bounding Boxes around ori
 
 ## Dashboard
 st.title("Objects Detector :tea: :coffee:")
-upload = st.file_uploader(label="Upload Image :", type=["png", "jpg", "jpeg" , "webp"]) ## Image as Bytes 
+upload = st.file_uploader(label="Upload Image :", type=["png", "jpg", "jpeg"]) ## Image as Bytes 
 
 if upload:
     img = Image.open(upload)
