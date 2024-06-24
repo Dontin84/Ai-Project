@@ -1,2 +1,2 @@
 # Ai-Project
-Image classifier
+Image classifier with Faster R-Cnn
